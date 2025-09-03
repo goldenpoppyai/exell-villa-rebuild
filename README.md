@@ -1,73 +1,145 @@
-# Welcome to your Lovable project
+# Villa Du Cacique — Exell Dream Estate
 
-## Project info
+A luxury villa rental landing page showcasing Villa Du Cacique, an exclusive 6-bedroom Mediterranean masterpiece located in Casa de Campo Resort, La Romana, Dominican Republic.
 
-**URL**: https://lovable.dev/projects/be7034f9-0eda-45b1-a153-bf2b25b1b967
+## 🏖️ About Villa Du Cacique
 
-## How can I edit this code?
+Villa Du Cacique represents the pinnacle of Caribbean luxury living, featuring:
 
-There are several ways of editing your application.
+- **6 Master Bedrooms** with en-suite bathrooms
+- **9 Luxury Bathrooms** (6 full + 3 half baths)  
+- **8,500 sq ft** of living space
+- **Infinity Pool** with ocean views
+- **Private Gardens** with tropical landscaping
+- **World-class Amenities** including fitness center, gourmet kitchen, and more
+- **Casa de Campo Location** with access to golf, beaches, and resort amenities
 
-**Use Lovable**
+Starting at **$2,500 per night** | Maximum **12 guests**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/be7034f9-0eda-45b1-a153-bf2b25b1b967) and start prompting.
+## 🚀 Quick Start
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
+- Node.js 18+ and npm
+- Mapbox account (for map integration)
 
-**Use your preferred IDE**
+### Installation
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Clone and install dependencies:**
+   ```bash
+   git clone <repository-url>
+   cd villa-du-cacique
+   npm install
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **Set up environment variables:**
+   ```bash
+   # Copy the example environment file
+   cp .env.example .env
+   
+   # Get your Mapbox token from https://mapbox.com/account/access-tokens
+   # Edit .env and replace __PUT_TOKEN_HERE__ with your actual token
+   ```
 
-Follow these steps:
+3. **Start development server:**
+   ```bash
+   npm run dev
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🗺️ Mapbox Setup
 
-# Step 3: Install the necessary dependencies.
-npm i
+**In Lovable Platform:**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Go to **Project Settings > Environment Variables**
+2. Add a new variable:
+   - **Name:** `VITE_MAPBOX_TOKEN`
+   - **Value:** Your Mapbox public token from [mapbox.com](https://mapbox.com/account/access-tokens)
+
+**For Local Development:**
+
+1. Create a `.env` file in your project root
+2. Add: `VITE_MAPBOX_TOKEN=your_mapbox_token_here`
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── Header.tsx           # Navigation and branding
+│   ├── Hero.tsx            # Main hero section with villa showcase
+│   ├── PropertyDetails.tsx  # Property specs and amenities
+│   ├── LocationMap.tsx     # Interactive Mapbox integration
+│   └── ContactForm.tsx     # Reservation request form
+├── assets/
+│   ├── villa-hero.jpg      # Main villa exterior image
+│   ├── villa-interior.jpg  # Interior living space
+│   └── exell-logo.png     # Exell Dream Estate branding
+├── pages/
+│   └── Index.tsx          # Main landing page
+└── index.css              # Design system and luxury styling
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Design System
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The project uses a sophisticated luxury design system with:
 
-**Use GitHub Codespaces**
+- **Typography:** Playfair Display (headings) + Inter (body)
+- **Colors:** Rich gold primary (#B8860B) with deep navy secondary  
+- **Gradients:** Luxury gold gradients for CTAs and accents
+- **Shadows:** Elegant drop shadows with brand color tinting
+- **Animations:** Smooth transitions with luxury easing curves
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🏗️ Built With
 
-## What technologies are used for this project?
+- **Vite** - Fast build tool and dev server
+- **React 18** - UI library with hooks and modern patterns
+- **TypeScript** - Type-safe JavaScript development  
+- **Tailwind CSS** - Utility-first CSS framework with custom design tokens
+- **shadcn/ui** - High-quality React component library
+- **Mapbox GL** - Interactive maps and location visualization
+- **Lucide React** - Beautiful icon library
 
-This project is built with:
+## 🚢 Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Lovable Platform
+1. Click **Publish** in the Lovable editor
+2. Add your Mapbox token in Project Settings > Environment Variables
+3. Your site will be live at `yourproject.lovable.app`
 
-## How can I deploy this project?
+### Custom Domain
+1. Go to **Project > Settings > Domains**  
+2. Click **Connect Domain**
+3. Follow the DNS configuration steps
 
-Simply open [Lovable](https://lovable.dev/projects/be7034f9-0eda-45b1-a153-bf2b25b1b967) and click on Share -> Publish.
+## 📞 Contact & Reservations
 
-## Can I connect a custom domain to my Lovable project?
+- **Phone:** +1 (809) 555-0123
+- **Email:** reservations@exelldreamestate.com
+- **Location:** Cacique 31, Casa de Campo Resort, La Romana, DR
 
-Yes, you can!
+## 📋 Next Steps Checklist
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+After deployment, ensure you:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- [ ] **Add Mapbox Token** - Required for location map functionality
+- [ ] **Test Contact Form** - Verify form submissions work correctly  
+- [ ] **Check Mobile Experience** - Test responsive design on various devices
+- [ ] **Set Custom Domain** - Configure your branded domain name
+- [ ] **Update Contact Info** - Replace placeholder contact details with real information
+
+## 🛡️ Security & Privacy
+
+- No sensitive data stored in client-side code
+- Mapbox token is public-safe (restricted to your domain)
+- Form data can be integrated with secure backend services
+- All images optimized for web delivery
+
+---
+
+**Villa Du Cacique** — Where luxury meets paradise in the heart of Casa de Campo Resort.
+
+*Exell Dream Estate - Your gateway to luxury Caribbean living.*
